@@ -13,9 +13,9 @@ class ImageController extends Controller
     }
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg, png|max:2048',
-        ]);
+       // $request->validate([
+           // 'image' => 'required|image|mimes:jpeg, png|max:2048',
+    // ]);
         Image::newImage($request);
         return back()->with('message', 'Image Info Uploaded Successfully');
     }
